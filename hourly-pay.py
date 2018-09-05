@@ -1,7 +1,7 @@
-# -Protocol73
-import os
-import sys
-import time
+#Wage after Taxes -Protocol73 for CIS122
+import os #for clear_term
+import sys #for sys.exit()
+import time # for time.sleep(#)
 
 def clear_term(): #clear the Screen
     os.system('cls' if os.name=='nt' else 'clear')

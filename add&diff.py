@@ -1,5 +1,6 @@
-#add&diff.py -Protocol73
-import os
+#add&diff.py -Protocol73 for CIS122
+import os #for clear_term command
+
 def clear_term(): #clear the Screen
     os.system('cls' if os.name=='nt' else 'clear')
 clear_term() 
