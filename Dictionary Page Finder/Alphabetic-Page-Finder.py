@@ -11,7 +11,8 @@ try: #for py v2 vs v3 input
 except NameError:
     pass
 
-search_word = "" #Clear the value
+#Clear these values
+search_word = "" 
 current_page = 0
 pos_check = 0
 
@@ -76,7 +77,6 @@ def dict_start_page(): #start looking here
 	clear_screen()
 	print("Turn to page " + str(current_page))
 	return int(start_page) #Start looking here
-
 def word_to_numbers(word):#Convert letters to numbers
 	#input_word = input('Word to find:') #Need User Input Word
 	#input_word = input_word.lower()
@@ -91,8 +91,7 @@ def page_head_word():#Return first four letters of word as numbers
 	headword = str(headword)
 	headword_as_number = word_to_numbers(headword)
 	return headword_as_number
-
-def real_search():
+def real_search():#search for the word
 	global current_page,pos_check
 	while True:
 		if search_word_as_num == headword_as_number:
@@ -136,7 +135,7 @@ def real_search():
 				continue
 			else:
 				print("\nYour Word Should be on this Page.")
-				print("Is " + search_word +  " Here?")
+				print("Is  the word " + search_word +  " Here?")
 				if Check_Prompt() is True:
 					clear_screen()
 					print("Complete")
@@ -148,12 +147,14 @@ def real_search():
 					time.sleep(2)
 					print("If it's not there, \nYour word is not in the Dictionary or your dictionary is to big")
 
-def main():
+#ready to call
+
+def main():#Define run order of the program
 	Welcome_Screen()
 	word_to_find()
 	dict_start_page()
 	page_head_word()
 	real_search()
 
-main()
 
+main()#Run
