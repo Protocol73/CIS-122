@@ -92,38 +92,6 @@ def page_head_word():#Return first four letters of word as numbers
 	headword_as_number = word_to_numbers(headword)
 	return headword_as_number
 
-
-
-def broken_search():#Compare Search Word To Header Word
-	if search_word_as_num == headword_as_number:
-		print("You Found it!")
-		time.sleep(2)
-	elif search_word_as_num[0] == headword_as_number[0]:
-		if search_word_as_num[1] == headword_as_number[1]:
-			if search_word_as_num[2] == headword_as_number[2]:
-				if search_word_as_num[3] == headword_as_number[3]:
-					if search_word_as_num[0:4] == headword_as_number[0:4]:
-						print("\nYour Word Should be on this Page.")
-						print("Is it Here?")
-						if Check_Prompt() is True:
-							return 0
-							clear_screen()
-							print("Complete")
-							sys.exit()
-						else:
-							print("Not Built to check more then the first four letters.")
-							print("Check one page back & one forward")
-							time.sleep(2)
-							print("If it's not there, \nYour word is not in the Dictionary or your dictionary is to big")
-							pass
-						pass
-					pass
-				pass
-			pass
-		pass
-	pass
-pass
-
 def real_search():
 	global current_page,pos_check
 	while True:
@@ -180,13 +148,12 @@ def real_search():
 					time.sleep(2)
 					print("If it's not there, \nYour word is not in the Dictionary or your dictionary is to big")
 
-#Start DEBUG Code
-def test():
+def main():
 	Welcome_Screen()
 	word_to_find()
 	dict_start_page()
 	page_head_word()
 	real_search()
 
-test()
-#End DEBUG Code
+main()
+
