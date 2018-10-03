@@ -2,14 +2,20 @@ dictionary lookup
 p. 122#7
 
 start
-	allocate memory
-	initialize Found = false
+	def initialize():
+		allocate memory
+		initialize Found = false
+		maxpages = 0
+	
 	Input word
-	how many pages?(maxpages)
+	Input maxpages
+
 	pagesPerLetter-maxpages/26
 	currpage = letterPosition * pagesPerLetter
-	read first
-	while first not = word OR not Found
+	
+	read header
+	
+	while header not = word OR not Found
 		if first < word
 			read last
 			if last < word
@@ -25,5 +31,6 @@ start
 			read first
 		endlf
 	endwhlle
+	
 	output word and page
 stop
