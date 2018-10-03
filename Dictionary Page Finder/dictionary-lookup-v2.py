@@ -1,7 +1,5 @@
 #dictionary-lookup.py
 
-#start
-#allocate memory
 import os 
 import sys 
 import time
