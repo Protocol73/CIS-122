@@ -31,12 +31,12 @@ Time_Now_Dash_Day = datetime.now().strftime("%m-%d-%y")
 
 #Defined Logic & Checks
 
-def math():
+def math(): #do the Calulations for the total bill
 	global totalBill
 	totalBill = ServiceCallPrice + int(bathrooms) * BathroomPrice + int(standardRooms) * StandardRoomPrice
 	pass
 
-def BasePriceCheck(): #check that @ least one room is included
+def BasePriceCheck(): #check that at least one room is included
 	if totalBill <= 49:
 		return False
 	else:
