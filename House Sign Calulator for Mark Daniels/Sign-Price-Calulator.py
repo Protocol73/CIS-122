@@ -37,3 +37,33 @@ CHARACTERS_GOLD_LEAF = 12
 
 
 #Program Functions
+
+def get_wood_type():
+	print("Enter the Wood Type for your sign.")
+	input_sign_wood_type = input("Oak '+$15' or Pine '+$0':")
+	sign_wood_type = input_sign_wood_type.lower()
+	if sign_wood_type in ['oak']:
+		return 'Oak'
+	elif sign_wood_type in ['pine']:
+		return 'Pine'
+	else:
+		print("Error: Expected Oak or Pine, Got:" + input_sign_wood_type)
+		time.sleep(2)
+		clear_term()
+		return -1
+
+def GetOrder():
+	order_num = input("Input order number:")
+	cust_name = input("Input Customer Name:")
+	wood_type = get_wood_type()
+	while wood_type not in ['Oak','Pine']:
+		wood_type = get_wood_type()
+	print(order_num + wood_type)#debug line
+
+#debuging code 
+
+def debug():
+	GetOrder()
+debug()
+
+#debuging code
