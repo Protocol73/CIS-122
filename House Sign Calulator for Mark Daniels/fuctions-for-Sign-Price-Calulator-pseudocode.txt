@@ -1,0 +1,24 @@
+fuctions-for-Sign-Price-Calulator-pseudocode.txt
+
+
+
+def get_wood_type():
+	print("Enter the Wood Type for your sign.")
+	input_wood_type = input("Oak '+$15' or Pine '+$0':")
+	wood_type = input_wood_type.lower()
+	if wood_type in ['oak']:
+		return 'Oak'
+	elif wood_type in ['pine']:
+		return 'Pine'
+	else:
+		print("\nError: Expected Oak or Pine, Got:" + input_wood_type + "\n")
+		return -1
+
+
+
+
+get_order_info()
+	input order_num
+	input customer_name
+	get_wood_type()
+	get_sign_text()
