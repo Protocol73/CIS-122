@@ -1,10 +1,22 @@
 fuctions-for-Sign-Price-Calulator-pseudocode.txt
 
+#Static Prices
+
+SIGN_MINIMUM_PRICE = 30
+SIGN_OAK_WOOD_PRICE = 15
+SIGN_PINE_WOOD_PRICE = 0
+
+CHARACTERS_EXTRA = 3
+CHARACTERS_GOLD_LEAF = 12
 
 
-def get_wood_type():
+def order_number(): #Get the order Number From the User 
+	order_num = input("Enter Order Number:")
+	returm order_num
+
+def get_wood_type(): # Get the Wood Type From the User
 	print("Enter the Wood Type for your sign.")
-	input_wood_type = input("Oak '+$15' or Pine '+$0':")
+	input_wood_type = input("Oak '+$"+ str(SIGN_OAK_WOOD_PRICE) + "' or Pine '+$" + str(SIGN_PINE_WOOD_PRICE) + "':")
 	wood_type = input_wood_type.lower()
 	if wood_type in ['oak']:
 		return 'Oak'
@@ -14,11 +26,55 @@ def get_wood_type():
 		print("\nError: Expected Oak or Pine, Got:" + input_wood_type + "\n")
 		return -1
 
+def SignPriceCal():#Calulate Total Price
+	price_math = SIGN_MINIMUM_PRICE
+	if sign_wood_type is 'Oak':
+		price_math = price_math + SIGN_OAK_WOOD_PRICE
+	else:
+		pass
+	if len(sign_text) > 6:
+		extra_letters = len(sign_text) - 6
+		price_math = price_math + extra_letters * CHARACTERS_EXTRA
+	else:
+		pass
+	if sign_characters_type is ['Gold Leaf']
+		price_math = price_math + CHARACTERS_GOLD_LEAF
+	else:
+		pass
+	sign_price_total = price_math
+	return sign_price_total
+
+def get_characters_type():
+	print("Pick your character Color,Options are \n Black, White or Gold Leaf")
+	sign_characters_type = input("Gold Leaf is '+$" + str(CHARACTERS_GOLD_LEAF) + "':")
+	return sign_characters_type
 
 
+def get_sign_text():
+	print("Set your sign text.")
+	print("For more then 6 Characters, add $3 per Character\n\n")
+	input_sign_text = input(":")
+	ClearTerm()
+	print("\nYour Sign Text is,\n\n" + input_sign_text + "\n\nIs this Correct?")
+	while check_prompt() is True:
+		sign_text = input_sign_text
+		get_characters_type()
+		break
+	else:
+		ClearTerm()
+		get_sign_text()
 
-get_order_info()
-	input order_num
+
+def get_order_info():
 	input customer_name
 	get_wood_type()
 	get_sign_text()
+
+OutputOrderInfo():
+	output order_num
+	output customer_name
+	output wood_type
+	output sign_text
+	output sign_characters_type
+	output sign_price_total
+	print invoice

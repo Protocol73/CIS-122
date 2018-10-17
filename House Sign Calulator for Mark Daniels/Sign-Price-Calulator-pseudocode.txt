@@ -1,17 +1,22 @@
 Sign-Price-Calulator-pseudocode.txt
+
 start 
 
 output startup/welcome Screen
 
-while display_mode() in ['A','B','C']
+while order_number() not in ['Quit','quit']
 
 	get_order_info()
 
 	SignPriceCal()
 
-	OutputOrderInfo(mode)
+	OutputOrderInfo()
+
+	order_number()
+
+	continue
 
 else:
-	display_mode()
+	break
 
 stop
