@@ -44,6 +44,8 @@ def SignPriceCal():#Calulate Total Price
 	sign_price_total = price_math
 	return sign_price_total
 
+
+
 def get_characters_type():
 	print("Pick your character Color,Options are \n Black, White or Gold Leaf")
 	sign_characters_type = input("Gold Leaf is '+$" + str(CHARACTERS_GOLD_LEAF) + "':")
