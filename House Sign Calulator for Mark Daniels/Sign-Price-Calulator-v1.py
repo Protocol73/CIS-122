@@ -86,7 +86,7 @@ def GetOrderInfo():
 	while wood_type not in ['Oak','Pine']:
 		wood_type = get_wood_type()
 	
-	print(order_num + wood_type)#debuging line -------------------------- REMOVE
+	print("DEBUG DATA:"order_num + wood_type)#debuging line -------------------------- REMOVE
 
 
 def sign_price_cal():
