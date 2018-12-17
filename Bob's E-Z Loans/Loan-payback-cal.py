@@ -1,6 +1,8 @@
 #Python Bob's E-Z Loans
-#For CIS122 p223 #9 
+#For CIS122 p223 Q#9 
 #By Protocol73
+import os
+import sys
 
 try: #for py v2 vs v3 input
     input = raw_input
@@ -35,6 +37,8 @@ def end_of_job():#quits the Program
 		os.execl(sys.executable, sys.executable, *sys.argv)
 
 #START
+INTEREST = 0.01
+
 clear_term()
 
 def welcome_title():
@@ -42,8 +46,22 @@ def welcome_title():
 
 def get_input():
 	global loan_amount,monthly_payment
-	loan_amount = input("Loan Amount:")
-	monthly_payment = input("Monthly Payment:")
+	input_loan_amount = input("Loan Amount:")
+	input_monthly_payment = input("Monthly Payment:")
+	loan_amount = int(input_loan_amount)
+	monthly_payment = int(input_monthly_payment)
 
 def cal_payments():
-	
+	global loan_amount,monthly_payment
+	print("Loan balance is:$" + str(loan_amount))
+	while loan_amount > monthly_payment:
+		loan_amount = loan_amount - monthly_payment
+		loan_amount = loan_amount + (loan_amount * INTEREST)
+		print("Loan Balance:$" +format(loan_amount,'.2f'))
+
+def main():
+	welcome_title()
+	get_input()
+	cal_payments()
+
+main()
